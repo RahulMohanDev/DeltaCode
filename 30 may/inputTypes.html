@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- target _blank says open in new page -->
+    <form action="/test" method="get" target="_blank">
+        <fieldset>
+        <legend>Personal information:</legend>
+        Gender
+        <input type="radio" name="gender" value="1">Male</input>
+        <input type="radio" name="gender" value="2">Female</input>
+        <input type="radio" name="gender" value="0">Others</input>
+
+        <br/>
+
+        is Married
+        <input type="radio" name="isMarried" value="1">Yes</input>
+        <input type="radio" name="isMarried" value="0">No</input>
+        </fieldset>
+
+
+        <br/>
+
+        <fieldset>
+            <legend>Transport</legend>
+        <input type="checkbox" name="modesOfTransport" value="Bike"> I have a bike<br>
+        <input type="checkbox" name="modesOfTransport" value="Car"> I have a car<br>
+        </fieldset>
+        <br/>
+
+         <!-- dorp downs -->
+        <fieldset>
+            <legend>Country</legend>
+        <label for="contry">Choose a country:</label>
+        <select name="country" id="country">
+            <option value="IN">India</option>
+            <option value="USA">USA</option>
+            <option value="UK">UK</option>
+            <option value="CR">Canada</option>
+        </select>
+        </fieldset>
+        <br/>
+        <!-- <input type="submit" value="Submit"> -->
+        <button>
+            Submit form
+        </button>
+    </form>
+</body>
+</html>
