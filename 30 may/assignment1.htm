@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Feedback Form</h1>
+    <form>
+        <label for="text" id="text-label">Enter you name</label>
+        <input type="text" required id="text"/>
+        <br/>
+        <label for="email" id="email-label">Your email address</label>
+        <input type="email" required id="email"/>
+        <br/>
+        <label for="message" id="message-label">Message</label>
+        <textarea id="message" required></textarea>
+        <br/>
+        <label for="rate" id="rate-label">How did you like our pizza?</label>
+        <input type="number" min="0" max="5" id="rate"/>
+        <br/>
+        <button type="submit" id="submit">Submit</button>
+    </form>
+</body>
+</html>
