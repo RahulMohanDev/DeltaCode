@@ -1,0 +1,17 @@
+<!-- <form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+    <input type="number" name="a">
+    +
+    <input type="number" name="b" value="0">
+    Output<output name="result" for="a b"></output>
+</form> -->
+
+
+<!-- should be usually inside a from -->
+<!-- onInput will have the logic -->
+<!-- result will be in the output tag and don't forget the for attribute-->
+<form oninput="result.value=parseInt(numb1.value)+parseInt(numb2.value)">
+ <input type="number" name="numb1" value="0">
+ <input type="number" name="numb2" value="0">
+ output<output name="result" for="numb1 numb2">0</output>
+</form>
+<!-- use parseInt to prevent bugs. -->
