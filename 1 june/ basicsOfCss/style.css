@@ -1,0 +1,56 @@
+/* selector {
+    property: value;
+} */
+
+/* camel case */
+/* testProgram  */
+
+/* snake case */
+/* test_program_abc */
+
+/* kebab case*/
+/* test-program-abc */
+
+/* PascalCase  used for calls name*/
+/* TestProgramAbc */
+
+/* Global selector */
+* {
+    color: blue;
+}
+/* Selecting all elements of a specific type: */
+/* h1 {
+    color: red;
+    background-color: green;
+} */
+
+/* Selecting all elements of a specific class: */
+/* .imp{
+    background-color: red;
+} */
+
+/* Selecting all elements of a specific id: */
+/* #importantText{
+    background-color: green;
+} */
+
+/* Selecting based on parent */
+/* Descendant selector */
+/* #grandParent div {
+    border: 2px solid red;
+} */
+
+/* Child selector */
+/* #grandParent > div {
+    border: 1px dashed red;
+} */
+
+/* Adjacent sibling combinator  */
+/* #brother1 + div {
+    color: aqua;
+} */
+
+/* General sibling combinator */
+/* #brother1 ~ div {
+    color: aqua;
+} */
