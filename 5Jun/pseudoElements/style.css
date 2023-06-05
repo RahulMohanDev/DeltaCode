@@ -1,0 +1,25 @@
+/* *{
+    background-color: blue;
+} */
+/* pseudo element */
+p::first-letter {
+    background-color: green;
+    font-size: 50px;
+}
+
+p::first-line {
+    background-color: red;
+}
+
+h2::before {
+    content: "Chapter:"
+}
+
+h2::after {
+    content: "->"
+}
+
+*::selection {
+    background-color: yellow;
+    color: black;
+}

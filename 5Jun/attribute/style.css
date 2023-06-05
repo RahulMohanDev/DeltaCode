@@ -1,0 +1,26 @@
+/* * {
+    background-color: aqua;
+} */
+
+/* attribute basic */
+input[type="text"] {
+    background-color: red;
+}
+
+a[href^="https://www.google.com"] {
+    background-color: lightgreen;
+}
+
+a[href^="https://www.facebook.com"] {
+    background-color: lightblue;
+}
+
+a[href$=".pdf"] {
+    background-color: yellow;
+}
+
+a[href$=".jpg"] {
+    background-color: lightblue;
+}
+
+
