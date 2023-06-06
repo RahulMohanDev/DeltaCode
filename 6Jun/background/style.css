@@ -4,5 +4,6 @@
     background-image: url("./dogo.png");
     background-repeat: no-repeat;
     border: 2px solid black;
-    background-position: bottom right;
+    background-size: cover;
+    /* background-position: bottom right; */
 }
