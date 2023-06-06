@@ -1,0 +1,4 @@
+button[class*="btn"]{
+    border: none;
+    font-size: 16px;
+}

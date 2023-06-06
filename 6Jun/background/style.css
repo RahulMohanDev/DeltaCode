@@ -1,0 +1,8 @@
+#awesome-logo{
+    width: 300px;
+    height: 300px;
+    background-image: url("./dogo.png");
+    background-repeat: no-repeat;
+    border: 2px solid black;
+    background-position: bottom right;
+}

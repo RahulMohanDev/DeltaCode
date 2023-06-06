@@ -1,0 +1,18 @@
+#main-div {
+  /* background-color: lightblue; */
+  /* background-color: rgb(0, 0, 0); */
+  /* background-color: rgba(255, 0, 0, 1); */
+  /* background-color: rgb(197,137,249); */
+  /*   15^1 + 15^0 */
+}
+
+/* 1,2,3,4,5,6,7,8,9,A,B,C,D,E,F {
+
+} */
+
+/* don't worry about this ! */
+.pos {
+    position: absolute;
+    top: 0px;
+    z-index: -1;
+}
