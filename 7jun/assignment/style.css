@@ -1,0 +1,15 @@
+#text1 {
+  text-shadow: 2px 2px 5px red;
+}
+
+#text2 {
+  background: rgba(0, 128, 0, 0.1);
+}
+
+#text3 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 200px;
+  border: 1px solid #000000;
+}

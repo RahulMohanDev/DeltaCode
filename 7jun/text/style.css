@@ -1,0 +1,30 @@
+/* text decorations */
+#text-example {
+  font-family: "roboto";
+  color: #ff9566;
+
+  /* text-decoration: underline; */
+  /* text-decoration: line-through; */
+  /* text-decoration: none; */
+
+  /* text transform */
+  /* text-transform: uppercase; */
+  /* text-transform: lowercase; */
+  /* text-transform: capitalize; */
+
+}
+
+/* #message {
+  border: 1px solid red;
+  width: 100px;
+  height: 30px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+} */
+
+#align{
+  /* text-align: center; */
+  /* center right left justify */
+  text-align: center;
+  width: 200px;
+}

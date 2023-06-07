@@ -1,0 +1,18 @@
+/* button[class*="button"]{
+    border: 0;
+} */
+
+ 
+/* full word match */
+/* buttonTest => won't work */
+/* buttontest => won't work */
+/* button-test => won't work */
+/* button[class~="button"]{
+    border: 0;
+} */
+
+/* button-green */
+/* button */
+button[class|="button"] {
+    border: 0px;
+}
