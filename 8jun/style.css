@@ -1,0 +1,38 @@
+/* block  */
+/* margin,padding,border width and height */
+#box{
+   /* display: inline; */
+   width: 100px;
+   height: 100px;
+   /* padding: 10px; */
+   border: 2px solid red; 
+   margin: 10px;
+   background-color: orange;
+}
+
+.box2{
+    width: 100px;
+    height: 100px;
+    border : 2px solid red;
+    background-color: green;
+}
+
+/* padding will till you tomorrow */
+/* margin will work for only left and right */
+/* border work as usual */
+#span1 {
+    background-color: brown;
+    /* width: 1000px;
+    height: 1000px; */
+    /* padding: 100px; */
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 20px;
+    margin-bottom: 200px;
+    border: 1px solid red;
+}
+
+#span2 {
+    background-color: green
+}
+

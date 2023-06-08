@@ -1,0 +1,22 @@
+.first-div {
+    width: 150px;
+    height: 150px;
+    background-color: blue;
+    
+
+    /* Write your code here */
+    padding: 10px;
+    border: 10px solid rgb(255, 20, 147);
+    margin-left: 200px;
+}
+
+.second-div {
+    width: 150px;
+    height: 150px;
+    background-color: red;
+
+    /* Write your code here */
+    padding: 5px;
+    border: 20px solid rgb(0, 0, 0);
+
+}
