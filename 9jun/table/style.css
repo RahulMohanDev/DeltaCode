@@ -1,0 +1,17 @@
+.container{
+    display: table;
+}
+
+.row {
+    display: table-row;
+}
+
+.cell {
+    display: table-cell;
+    padding: 10px;
+    border: 1px solid red;
+}
+
+/* #header {
+    display: ;
+} */

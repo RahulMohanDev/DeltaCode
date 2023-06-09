@@ -1,0 +1,17 @@
+p.long-para {
+    width: 200px;
+    border: 1px solid;
+    white-space: wrap;
+    /* Write your code here */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+p.long-para:hover {
+    overflow: visible;
+    /* width: fit-content; */
+}
+
+div::before {
+    content: "⬇️⬇️ HOVER ⬇️⬇️";
+}
