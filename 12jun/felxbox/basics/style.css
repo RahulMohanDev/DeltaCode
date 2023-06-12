@@ -1,0 +1,23 @@
+/* body {
+    height: 100vh;
+} */
+
+#library {
+    display: flex;
+    flex-direction: row; 
+    /* changes the direction of primary axis */
+    /* justify-content: center; */
+    align-items: baseline;
+    height: 300px;
+    background-color: green;
+}
+
+.box {
+    /* background-color: red; */
+    padding: 10px;
+    /* border: 1px solid black; */
+}
+
+#big {
+    font-size: 40px;
+}
