@@ -1,0 +1,48 @@
+#container {
+    display: flex;
+}
+.box{
+    background-color: aqua;
+    border: 1px solid red;
+}
+
+#div1 {
+    flex-basis: 300px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    /* width: 1000px; */
+}
+
+#div2 {
+    flex-grow: 1;
+}
+
+#div3 {
+    flex-grow: 1;
+}
+
+/* this is the long way but exactly  same*/
+
+/* #content-1{
+   flex-basis: 0; 
+   flex-grow: 1;
+}
+
+#content-2 {
+    flex-basis: 0;
+    flex-grow: 1;
+} */
+
+/* #content-1{
+   flex: 1;
+   /* flex : flex-grow flex-shrink flex-basis */
+/* }  */
+
+/* #content-2 {
+    flex: 1;
+}  */
+
+.box {
+    flex: 1;
+}
+

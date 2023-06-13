@@ -7,14 +7,20 @@
     flex-direction: row; 
     /* changes the direction of primary axis */
     justify-content: center;
-    align-items: baseline;
+    align-items: center;
     height: 300px;
     background-color: green;
 }
 
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
 .box {
-    /* background-color: red; */
     padding: 10px;
+    /* background-color: red; */
     /* border: 1px solid black; */
 }
 
