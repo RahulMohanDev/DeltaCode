@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <form action=" " class="container">
+        <h1>Payment Form</h1>
+        <hr>
+        <h2>User Information</h2>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name..."required>
+        <p></p>
+        <fieldset>
+            <legend>Gender</legend>
+            <input type="radio" value="male" name="gender">Male
+            <input type="radio" value="female" name="gender">Female
+        </fieldset>
+        <p><label>Address: <textarea rows="4" col="7" id="textarea" name="address" placeholder="Enter your Address..."></textarea></label></p>
+        <p><label>Email: <input type="email" placeholder="Enter your Email..." name="email"></label> <br></p>
+        <p><label>Pincode: <input type="number" placeholder="Enter your Pincode..." name="Pincode"></label></p>
+        <h2>Payment Information</h2>
+        <p>
+            <label> Card Type:
+                <select>
+                    <option value="">--Select Card Type--</option>
+                    <option value="VISA" name="Card Type">VISA</option>
+                    <option value="Mastercard" name="Card Type">Mastercard</option>
+                </select>
+            </label>
+        </p>
+        <p><label>Card Number <input type="number" placeholder="1111-2222-3333-4444" name="Card Number" required></label></p>
+        <p><label>Expiration Date <input type="date" id="expDate" name="expiryDate"></label></p>
+        <p><label>CVV <input type="password" id="password" placeholder="Enter CVV..." name="CVV"></label></p>
+        <input type="submit" value="Submit" class="submitButton">
+    </form>
+</body>
+</html>

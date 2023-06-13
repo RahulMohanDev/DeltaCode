@@ -1,0 +1,18 @@
+.holder{
+    width: 100vw;
+    height: 100vh;
+    /* write code below */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.item{
+    width: 100px;
+    height: 100px;
+}
+
+.item-1{
+    background-color: red;
+}
