@@ -1,0 +1,27 @@
+main.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+article {
+  height: 250px;
+  width: 250px;
+  border: 1px solid;
+  border-radius: 10px;
+}
+
+/* Write your code here */
+
+@media screen and (max-width:800px){
+    article {
+        background-color: rgb(0, 128, 0);
+        color: rgb(255, 255, 255);
+        padding: 10px;
+        text-align: center;
+    }
+}
+
+
+

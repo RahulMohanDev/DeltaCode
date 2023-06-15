@@ -1,0 +1,63 @@
+
+* {
+    background-color: aqua;
+}
+
+/* @media screen and (min-width: 500px) {
+    * {
+        background-color: red;
+    }
+} */
+
+/* @media screen and (orientation: landscape){
+    * {
+        background-color: red;
+    }
+} */
+
+/* 
+    bellow 600px ( phones and very small devices)
+    600px -> large phones
+    768px -> tables
+    992px -> normal laptop
+    1200px -> large laptops 
+ */
+
+ /* mobile first design */
+
+ /* most phones */
+ * {
+    background-color: green;
+ }
+
+/* big phones */
+@media screen and (min-width:600px){
+    * {
+        background-color: blue;
+    }
+ }
+
+ /* tables */
+ @media screen and (min-width:768px){
+    * {
+        background-color: orange;
+    }
+ }
+
+ /* normal laptop */
+ @media screen and (min-width: 992px){
+    * {
+        background-color: gray;
+    }
+ }
+
+ /*  very large laptops or desktops */
+ @media screen and (min-width: 1200px){
+    * {
+        background-color: palevioletred;
+    }
+ }
+
+
+
+

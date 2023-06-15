@@ -1,0 +1,42 @@
+.container{
+    display: flex;  
+    flex-wrap: wrap; 
+    gap: 5px;
+    background-color: red;
+    height: 500px;
+}
+
+.box {
+    flex-basis: 100px;
+    height: 100px;
+    background-color: aqua;
+    border: 1px solid black;
+    min-width: 50px;
+    max-width: 150px;
+    flex-grow: 1;
+}
+
+/* for no 1  */
+/* .container div:nth-child(1) {
+    order: 1;   
+} */
+
+/* for no 2 */
+/* .container div:nth-child(2) {
+    order: 2;   
+} */
+
+/* for no 3 */
+/* .container div:nth-child(3) {
+    order: 1;   
+} */
+
+/* 
+ 1) all elements have by default order of 0
+ 2) if elements have the same order then the order in which the html is 
+ written will take preference
+ 3) for different oder follow the number system (-numbers,0,positive) 
+*/
+
+/* align item */
+/* align-content: control's the space bewteen flex boxes.  */
