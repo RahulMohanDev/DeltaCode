@@ -1,0 +1,29 @@
+#container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-rows: 100px 100px;
+  /* tell what the size of the implicit row will be */
+  grid-auto-rows: minmax(100px, auto);
+  /* when they introduced gird */
+  /* gap in row */
+  /* grid-row-gap: 10px; */
+  /* grid-column-gap: 10px; */
+  /* grid-gap: 10px; */
+  /* new way */
+  /* row-gap: 10px; */
+  /* column-gap: 10px; */
+  gap: 10px;
+}
+
+#container div {
+  background-color: red;
+}
+
+/* display: grid */
+/* start the grid algorithm */
+
+/* grid-template-(columns/row) */
+/* used to define the explicit */
+
+/* gird-auto-rows / grid-auto-column */
+/* used to define the implicit grid */

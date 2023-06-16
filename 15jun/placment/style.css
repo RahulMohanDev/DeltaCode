@@ -1,0 +1,31 @@
+#container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  gap: 10px;
+}
+
+nav {
+  background-color: aqua;
+  grid-column-start: 1;
+  grid-column-end: 6;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+aside {
+  grid-row: 2 / 4;
+  grid-column: 1 / 3;
+  background-color: red;
+}
+
+main {
+  grid-row: 2/4;
+  grid-column: 3/6;
+  background-color: orange;
+}
+
+footer {
+  background-color: aquamarine;
+  grid-column: 1/6;
+}
