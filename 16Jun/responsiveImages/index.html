@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <img
+      src="./asset/images/house-4k.jpeg"
+      alt="A good house"
+      srcset="
+        ./asset/images/house-mobile.jpeg   600w,
+        ./asset/images/house-tablet.jpeg   800w,
+        ./asset/images/house-desktop.jpeg 1000w,
+        ./asset/images/house-4k.jpeg      1400w
+      "
+    />
+    <div class="video-container">
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/jfKfPfyJRdk"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <div id="container">
+      <div>Exxat</div>
+      <div>bye I am normal</div>
+    </div>
+  </body>
+</html>

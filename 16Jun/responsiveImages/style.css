@@ -1,0 +1,40 @@
+/* responsive video iframe */
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;;
+}
+
+.video-container iframe{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+#container {
+    background-color: orange;
+    width: 300px;
+    height: 1000px;
+    /* position: relative; */
+}
+
+/* #container div:nth-child(1) {
+    position: fixed;
+    top:0px;
+} */
+
+#container div:nth-child(1) {
+    position: sticky;
+    top: 0px;
+}
+
+/* static : default */
+/* relative : is like 
+driving car you can move from your original location */
+/* it will also control the child ka absolute */
+/* absolute: 1) no parent with relative absolute to screen */
+/*           2) parent is relative then absolute to it. */
+/* fixed : it like scratches will never go away (no money on chasify)  */
+/* sticky : like fixed but (x gf) if they see you they will never go away */
