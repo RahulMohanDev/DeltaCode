@@ -1,0 +1,24 @@
+body, html {
+    /* min-height: 100vh; */
+    height: 100vh;
+    margin: 0px;
+    background-color: orange;
+    font-size: 20px;
+}
+
+#box {
+    background-color: red;
+    /* absolute units */
+    /* width: 100px; */
+    /* width: 10cm; */
+    /* height: 100px; */
+    width: 50%;
+    height: 50%;
+    /* font-size: 10px; */
+    /* em or rem  */
+    font-size: 10px;
+} 
+
+#box div {
+    font-size: 2rem;
+}
