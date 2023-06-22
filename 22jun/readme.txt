@@ -31,3 +31,4 @@ git commit -am "commit message" // only stages and commits updates
 dosen't work on untracked filed you need to manually add them
 
 
+git push --set-upstream origin branch-name (only once when you create new branch)
