@@ -11,7 +11,7 @@ To switch
 git merge (will merge whatever branch you menton with your branch)
 
 
-Wake up 
+Wake up / and to reduce conflicts
 1) git checkout main/master
 2) git pull
 3) git checkout "your branch"
