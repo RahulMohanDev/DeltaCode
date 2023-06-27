@@ -1,26 +1,32 @@
-// console.log(1+2*3);
-
-// console.log(1|3);
-
-// 1 => 01
-// 3 => 11
-
-// if(0||4) {
-//     console.log("is this true")
+// function add(a,b) {
+//     return a+b;
 // }
 
-// if(3!=="3"){
-//     console.log("Javascript be crazy");
-// }else {
-//     console.log("Javascript is normal now")
-// }
+// const a = 5;
+// const b = +"t";
 
-// if(3<=5){
-//     console.log("true");
-// }
+// add(a,b);
 
-// ternary operator.
-// 3 === 3 ? console.log("true") : console.log(false);
+function b() {
+    console.log("hi there");
+    console.log("test 123")
+}
 
-;
+
+function a() {
+    const value =23;
+    console.log("yo,")
+    b();
+}
+
+a();
+
+
+// continue next breakpoint
+// step over next line in the same function
+// step into (step into the function)
+// step out (step out of the function)
+
+
+
 
