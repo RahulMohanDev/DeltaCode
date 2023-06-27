@@ -1,12 +1,17 @@
-const arr = [1,2,3];
-// console.log(arr.pop());
-console.log(arr.shift());
-console.log(arr);
-arr.unshift(1);
-arr.unshift(0);
-arr.unshift(-1);
-console.log(arr);
+// console.log(1+2*3);
 
-console.log(arr.length);
+// console.log(1|3);
 
-console.dir(arr);
+// 1 => 01
+// 3 => 11
+
+// if(0||4) {
+//     console.log("is this true")
+// }
+
+
+// if(3!=="3"){
+//     console.log("Javascript be crazy");
+// }else {
+//     console.log("Javascript is normal now")
+// }
