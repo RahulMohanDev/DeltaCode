@@ -81,9 +81,11 @@
 
 // "java instructor" 
 // "javascript instructor" 
-testInstructor =instructorHigherOrderFunction(instructor) {
+// testInstructor =instructorHigherOrderFunction(instructor) {
 
-}
+// }
 
 testInstructor("teach xyz");
 // java instructor says: teach xyz 
+// ++ marks
+// javascript instructor Rahul Mohan says: 
