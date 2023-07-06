@@ -9,14 +9,9 @@
 
 // const list = document.getElementsByClassName("button");
 
-const element = document.querySelector("h2");
-const elements = document.querySelectorAll("h2");
-console.log(elements);
-
-
-
-
-
+// const element = document.querySelector("h2");
+// const elements = document.querySelectorAll("h2");
+// console.log(elements);
 
 
 // node list or html collection
@@ -34,17 +29,17 @@ console.log(elements);
 // h1.innerText = h1.innerText + " this was added by js"; 
 
 
-const obj = {
-    name: "rahul Mohan"
-}
+// const obj = {
+//     name: "rahul Mohan"
+// }
 
-//  dot notation and bracket notation
-const keyValue = "name";
+// //  dot notation and bracket notation
+// const keyValue = "name";
 
-obj[keyValue];
-obj.name;
+// obj[keyValue];
+// obj.name;
 
 
-// typeOf
-typeof "test"
--(-1);
+// // typeOf
+// typeof "test"
+// -(-1);
