@@ -22,20 +22,20 @@
 
 // console.log(test)
 
-const test1 = {
-  name: "rahul mohan",
-};
+// const test1 = {
+//   name: "rahul mohan",
+// };
 
-const test2 = {
-  name: "Eshita",
-};
+// const test2 = {
+//   name: "Eshita",
+// };
 
-const test3 = {
-  name: "Alok",
-  age: 28,
-};
+// const test3 = {
+//   name: "Alok",
+//   age: 28,
+// };
 
-const merge = { ...test1, ...test2, ...test3 };
+// const merge = { ...test1, ...test2, ...test3 };
 
 // console.log(merge);
 
@@ -84,3 +84,22 @@ const merge = { ...test1, ...test2, ...test3 };
 // const arr2 = [3, 4, 5];
 // const newArray = [...arr, ...arr2, 6, 7];
 // console.log(newArray);
+
+function add(...arrayOfNumber) {
+  let sum = 0;
+  for (let el of arrayOfNumber) {
+    sum += el;
+  }
+  return sum;
+}
+
+// function add(arrayOfNumber) {
+//     let sum = 0;
+//       for (let el of arrayOfNumber) {
+//         sum += el;
+//       }
+//       return sum;
+// }
+
+console.log("hi")
+console.log(add(2, 3, 4, 5, 6, 5, 2, 34, 6));
