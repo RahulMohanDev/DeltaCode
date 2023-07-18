@@ -127,27 +127,31 @@ function test() {}
 // obj.sayName();
 
 // constructor function
-const Person = function (name, age) {
-  this.name = name;
-  this.age = age;
-  return this;
-};
+// const Person = function (name, age) {
+//   this.name = name;
+//   this.age = age;
+//   return this;
+// };
 
-const john = new Person("John", 27);
+// const john = new Person("John", 27);
 
-// constructor function
-console.dir(john);
+// // constructor function
+// console.dir(john);
 
-// factory function
-const createPerson = function (name, age) {
-  return {
-    name: name,
-    age: age,
-  };
-};
+// // factory function
+// const createPerson = function (name, age) {
+//   return {
+//     name: name,
+//     age: age,
+//   };
+// };
 
-const jane = createPerson("Jane", 27);
+// const jane = createPerson("Jane", 27);
 
-// factory function
-console.dir(john instanceof Person);
-console.dir(jane instanceof createPerson);
+// // factory function
+// console.dir(john instanceof Person);
+// console.dir(jane instanceof createPerson);
+
+
+
+
