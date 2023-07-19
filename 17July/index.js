@@ -18,10 +18,13 @@ function test() {}
 
 // test(abc);
 
+// first class functions
 //  two conditions
 // 1. function should be able to be passed as an argument
 // 2. function should be able to be returned from another function
 
+
+// closure
 // function sayHelloMaker(name) {
 //    const b = "test"
 //    const a = function() {
@@ -128,6 +131,8 @@ function test() {}
 
 // constructor function
 // const Person = function (name, age) {
+//   // const this = {};
+//   // this object is of type Person
 //   this.name = name;
 //   this.age = age;
 //   return this;
@@ -135,10 +140,10 @@ function test() {}
 
 // const john = new Person("John", 27);
 
-// // constructor function
+// constructor function
 // console.dir(john);
 
-// // factory function
+// factory function
 // const createPerson = function (name, age) {
 //   return {
 //     name: name,
@@ -147,6 +152,10 @@ function test() {}
 // };
 
 // const jane = createPerson("Jane", 27);
+// const jane = {
+//   name: "Jane",
+//   age: 27,
+// }
 
 // // factory function
 // console.dir(john instanceof Person);
