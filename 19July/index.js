@@ -49,13 +49,18 @@
 
 const Person = function (name, age) {
   // happens here 
+  console.log(this);
   this.name = name;
   this.age = age;
 };
 
+// Person.prototype.constructor = Person;
+
 Person.prototype.sayName = function () {
   console.log(`Hello my name is ${this.name}`);
 };
+
+// console.dir(Person);
 
 // every function has a prototype property
 
@@ -70,6 +75,8 @@ Person.prototype.sayName = function () {
 
 const john = new Person("John", 27);
 const tom = new Person("Tom", 30);
-console.dir(john);
-console.dir(tom);
-john.sayName();
+// console.dir(john);
+// console.dir(tom);
+// john.sayName();
+
+Array 
