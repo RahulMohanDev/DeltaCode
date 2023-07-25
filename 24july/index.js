@@ -14,10 +14,10 @@
 // console.log("I am first");
 
 // json sting
-const json = '{"age": 27,"name": "Rahul Mohan","isStupid": true}';
+// const json = '{"age": 27,"name": "Rahul Mohan","isStupid": true';
 // json.age
-const jsonObject = JSON.parse(json);
-console.log(jsonObject.age);
+// const jsonObject = JSON.parse(json);
+// console.log(jsonObject.age);
 
 // oject to json
 // const obj = {
@@ -39,40 +39,50 @@ console.log(jsonObject.age);
 
 // test.call(obj);
 
-const Animal = function (name, age) {
-  this.name = name;
-  this.age = age;
-};
+// const Animal = function (name, age) {
+//   this.name = name;
+//   this.age = age;
+// };
 
-Animal.prototype.eat = function () {
-  console.log("I am eating");
-};
-Animal.prototype.sleep = function () {
-  console.log("I am sleeping");
-};
+// Animal.prototype.eat = function () {
+//   console.log("I am eating");
+// };
+// Animal.prototype.sleep = function () {
+//   console.log("I am sleeping");
+// };
 
-const Dog = function (name, age, breed) {
-  // calling super
-  Animal.call(this, name, age);
-  console.dir(this);
-  this.breed = breed;
-  // super()
-};
+// // new animal = new Animal("Tommy", 2);
 
-// // Dog[[prototype]] = Animal.prototype
-Dog.prototype = Object.create(Animal.prototype);
-// resetting constructor
-Dog.prototype.constructor = Dog;
+// const Dog = function (name, age, breed) {
+//   // calling super
+//   Animal.call(this, name, age);
+//   console.dir(this);
+//   this.breed = breed;
+//   // super()
+// };
 
-Dog.prototype.bark = function () {
-  console.log("I am barking");
-};
+// // new Dog("Tommy", 2, "Pug");
+// // [[prototype]] = Dog.prototype
 
-const dog = new Dog("Tommy", 2, "Pug");
-console.dir(dog);
-dog.eat();
-dog.sleep();
-dog.bark();
+// // // Dog[[prototype]] = Animal.prototype
+// console.dir(Dog.prototype, "old Dog.prototype");
+// // consturctor link is broken
+// Dog.prototype = Object.create(Animal.prototype);
+// // link is correct constructor is missing
+// // console.dir(Dog.prototype, "new Dog.prototype");
+// // resetting constructor
+// Dog.prototype.constructor = Dog;
+// // console.dir(Dog.prototype, "new Dog.prototype");
+
+// Dog.prototype.bark = function () {
+//   console.log("I am barking");
+// };
+
+// const dog = new Dog("Tommy", 2, "Pug");
+// console.dir(dog);
+// dog.eat();
+// dog.sleep();
+// dog.bark();
 
 //
 
@@ -84,28 +94,27 @@ dog.bark();
 // person.name = "Rahul";
 // console.dir(person);
 
+class Animal {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
 
-// class Animal {
-//     constructor(name, age) {
-//         this.name = name;
-//         this.age = age;
-//     }
-    
-//     eat() {
-//         console.log("I am eating");
-//     }
-    
-//     sleep() {
-//         console.log("I am sleeping");
-//     }
-// }
+    static eat() {
+        console.log("I am eating");
+    }
+
+    sleep() {
+        console.log("I am sleeping");
+    }
+}
 
 // class Dog extends Animal {
 //     constructor(name, age, breed) {
 //         super(name, age);
 //         this.breed = breed;
 //     }
-    
+
 //     bark() {
 //         console.log("I am barking");
 //     }
