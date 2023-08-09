@@ -54,3 +54,55 @@ nav a {
   background-color: #d4d6d5;
   color: #000;
 }
+
+#tabs {
+  margin-left: 20px;
+}
+
+#movie-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.movie-poster {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.movie {
+  width: 200px;
+  height: 300px;
+  border: 1px solid black;
+  font-size: 10px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.movie-details p {
+  padding: 4px;
+}
+
+.movie footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 4px;
+}
+
+/* .movie h2 {
+  font-size: 12px;
+  text-align: center;
+} */
+
+.movie h2 {
+  font-size: 12px;
+  text-align: center;
+}
+
+.like {
+  font-size: 20px;
+}
