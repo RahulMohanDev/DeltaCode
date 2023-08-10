@@ -2,13 +2,68 @@
 // document.getElementsByClassName
 // document.getElementsByName
 
-const movieListSection = document.querySelector("#movie-list");
+let pageNumber;
+let totalPages = 0;
+let currentState = "desc";
 
-async function showMovies(pageNumber = 1) {
-  const response = await fetch(
-    `https://api.themoviedb.org/3/movie/top_rated?api_key=f531333d637d0c44abc85b3e74db2186&language=en-US&page=${pageNumber}`
+const movieListSection = document.querySelector("#movie-list");
+const nextBtn = document.querySelector("#next");
+const backBtn = document.querySelector("#prev");
+const pageNumberContainer = document.querySelector("#page-no");
+const ratingToggle = document.querySelector("#rating-toggle");
+
+const SORT_ASC_TEXT = "Sort by rating descending";
+const SORT_DESC_TEXT = "Sort by rating ascending";
+
+const SORT_ASC = "popularity.asc";
+const SORT_DESC = "popularity.desc";
+
+function addNavigationButtons() {
+  nextBtn.addEventListener("click", () => {
+    if (pageNumber < totalPages) {
+      pageNumber++;
+      showMovies(pageNumber);
+    }
+  });
+
+  backBtn.addEventListener("click", () => {
+    if (pageNumber > 1) {
+      pageNumber--;
+      showMovies(pageNumber);
+    }
+  });
+}
+
+function addPopularityButton() {
+  ratingToggle.addEventListener("click", (e) => {
+    currentState = currentState === "desc" ? "asc" : "desc";
+    showMovies(pageNumber, currentState);
+    e.target.innerText =
+      currentState === "desc" ? SORT_DESC_TEXT : SORT_ASC_TEXT;
+  });
+}
+
+async function showMovies(pageNumber = 1, sort_by = "desc") {
+  movieListSection.innerText = "";
+  const options = {
+    method: "GET",
+    headers: {
+      accept: "application/json",
+      Authorization:
+        "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiZjEwMjIzNGM0YzcwZjZhMDRmNWIyOTFlN2ZjMTU4YyIsInN1YiI6IjY0ZDNjMGI3MDIxY2VlMDExYzhmMTYzNiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.qRQZAy5zW4VQAn64hrz_hC4qTOOZH8Xfwx9vfMIEBzE",
+    },
+  };
+  let response;
+
+  response = await fetch(
+    `https://api.themoviedb.org/3/discover/movie?include_adult=false&language=en-US&page=${pageNumber}&sort_by=${
+      sort_by === "asc" ? SORT_ASC : SORT_DESC
+    }`,
+    options
   );
+
   const json = await response.json();
+  totalPages = json.total_pages;
   const movieList = json.results;
   for (let movie of movieList) {
     // movie section
@@ -22,7 +77,7 @@ async function showMovies(pageNumber = 1) {
     movieDetails.classList.add("movie-details");
     // image/ banner
     let banner = document.createElement("img");
-    banner.src = `https://image.tmdb.org/t/p/w200/${movie.backdrop_path}`;
+    banner.src = `https://image.tmdb.org/t/p/original/${movie.backdrop_path}`;
     banner.classList.add("movie-poster");
     // footer
     const footer = document.createElement("footer");
@@ -39,9 +94,18 @@ async function showMovies(pageNumber = 1) {
     movieElement.appendChild(movieTitle);
     movieElement.appendChild(footer);
     movieListSection.appendChild(movieElement);
+    pageNumberContainer.innerText = pageNumber;
   }
 
   //   movieList
 }
 
-showMovies();
+async function init() {
+  pageNumber = 1;
+  await showMovies(1);
+  addNavigationButtons();
+  addPopularityButton();
+}
+
+// application code
+init();
