@@ -22,14 +22,14 @@ function addNavigationButtons() {
   nextBtn.addEventListener("click", () => {
     if (pageNumber < totalPages) {
       pageNumber++;
-      showMovies(pageNumber);
+      showMovies(pageNumber, currentState);
     }
   });
 
   backBtn.addEventListener("click", () => {
     if (pageNumber > 1) {
       pageNumber--;
-      showMovies(pageNumber);
+      showMovies(pageNumber, currentState);
     }
   });
 }
@@ -37,6 +37,7 @@ function addNavigationButtons() {
 function addPopularityButton() {
   ratingToggle.addEventListener("click", (e) => {
     currentState = currentState === "desc" ? "asc" : "desc";
+    pageNumber = 1;
     showMovies(pageNumber, currentState);
     e.target.innerText =
       currentState === "desc" ? SORT_DESC_TEXT : SORT_ASC_TEXT;
