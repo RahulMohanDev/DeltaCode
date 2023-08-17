@@ -5,12 +5,25 @@
 let pageNumber;
 let totalPages = 0;
 let currentState = "desc";
+let favMovies = [];
 
 const movieListSection = document.querySelector("#movie-list");
 const nextBtn = document.querySelector("#next");
 const backBtn = document.querySelector("#prev");
 const pageNumberContainer = document.querySelector("#page-no");
 const ratingToggle = document.querySelector("#rating-toggle");
+const movieControls = document.querySelector("#pagination");
+const allMoviesButton = document.querySelector("#allMovies");
+const favMoviesButton = document.querySelector("#favMovies");
+
+allMoviesButton.addEventListener("click", () => {
+  // there is a bug here
+  init();
+});
+
+favMoviesButton.addEventListener("click", () => {
+  showMovies(1, "desc", favMovies);
+});
 
 const SORT_ASC_TEXT = "Sort by rating descending";
 const SORT_DESC_TEXT = "Sort by rating ascending";
@@ -22,6 +35,7 @@ function addNavigationButtons() {
   nextBtn.addEventListener("click", () => {
     if (pageNumber < totalPages) {
       pageNumber++;
+      localStorage.setItem("pageNumber", pageNumber);
       showMovies(pageNumber, currentState);
     }
   });
@@ -29,6 +43,7 @@ function addNavigationButtons() {
   backBtn.addEventListener("click", () => {
     if (pageNumber > 1) {
       pageNumber--;
+      localStorage.setItem("pageNumber", pageNumber);
       showMovies(pageNumber, currentState);
     }
   });
@@ -44,28 +59,56 @@ function addPopularityButton() {
   });
 }
 
-async function showMovies(pageNumber = 1, sort_by = "desc") {
+function handleHeartClick(e, movie) {
+  e.target.classList.toggle("fa-regular");
+  e.target.classList.toggle("fa-solid");
+  e.target.classList.toggle("heart-red");
+  if (e.target.classList.contains("fa-solid")) {
+    favMovies.push(movie);
+  } else {
+    favMovies = favMovies.filter((currentMovie) => {
+      return currentMovie.id !== movie.id;
+    });
+  }
+
+  console.log(favMovies);
+  localStorage.setItem("favMovies", JSON.stringify(favMovies));
+  // e.target.
+}
+
+async function showMovies(
+  pageNumber = 1,
+  sort_by = "desc",
+  customMovieArray = null
+) {
   movieListSection.innerText = "";
-  const options = {
-    method: "GET",
-    headers: {
-      accept: "application/json",
-      Authorization:
-        "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiZjEwMjIzNGM0YzcwZjZhMDRmNWIyOTFlN2ZjMTU4YyIsInN1YiI6IjY0ZDNjMGI3MDIxY2VlMDExYzhmMTYzNiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.qRQZAy5zW4VQAn64hrz_hC4qTOOZH8Xfwx9vfMIEBzE",
-    },
-  };
-  let response;
 
-  response = await fetch(
-    `https://api.themoviedb.org/3/discover/movie?include_adult=false&language=en-US&page=${pageNumber}&sort_by=${
-      sort_by === "asc" ? SORT_ASC : SORT_DESC
-    }`,
-    options
-  );
+  let movieList;
+  if (!customMovieArray) {
+    movieControls.classList.remove("hidden");
+    const options = {
+      method: "GET",
+      headers: {
+        accept: "application/json",
+        Authorization:
+          "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiZjEwMjIzNGM0YzcwZjZhMDRmNWIyOTFlN2ZjMTU4YyIsInN1YiI6IjY0ZDNjMGI3MDIxY2VlMDExYzhmMTYzNiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.qRQZAy5zW4VQAn64hrz_hC4qTOOZH8Xfwx9vfMIEBzE",
+      },
+    };
+    let response;
+    response = await fetch(
+      `https://api.themoviedb.org/3/discover/movie?include_adult=false&language=en-US&page=${pageNumber}&sort_by=${
+        sort_by === "asc" ? SORT_ASC : SORT_DESC
+      }`,
+      options
+    );
+    const json = await response.json();
+    totalPages = json.total_pages;
+    movieList = json.results;
+  } else {
+    movieList = customMovieArray;
+    movieControls.classList.add("hidden");
+  }
 
-  const json = await response.json();
-  totalPages = json.total_pages;
-  const movieList = json.results;
   for (let movie of movieList) {
     // movie section
     const movieTitle = document.createElement("h2");
@@ -86,6 +129,18 @@ async function showMovies(pageNumber = 1, sort_by = "desc") {
     date.innerText = `date ${movie.release_date}`;
     const heart = document.createElement("i");
     heart.classList.add("fa-regular", "fa-heart", "like");
+    if (
+      favMovies.find((currentMovie) => {
+        return currentMovie.id === movie.id;
+      })
+    ) {
+      heart.classList.toggle("fa-regular");
+      heart.classList.toggle("fa-solid");
+      heart.classList.toggle("heart-red");
+    }
+    heart.addEventListener("click", (e) => {
+      handleHeartClick(e, movie);
+    });
     footer.appendChild(date);
     footer.appendChild(heart);
     // parent
@@ -102,8 +157,13 @@ async function showMovies(pageNumber = 1, sort_by = "desc") {
 }
 
 async function init() {
-  pageNumber = 1;
-  await showMovies(1);
+  pageNumber = localStorage.getItem("pageNumber")
+    ? Number.parseInt(localStorage.getItem("pageNumber"))
+    : 1;
+  favMovies = localStorage.getItem("favMovies")
+    ? JSON.parse(localStorage.getItem("favMovies"))
+    : [];
+  await showMovies(pageNumber);
   addNavigationButtons();
   addPopularityButton();
 }

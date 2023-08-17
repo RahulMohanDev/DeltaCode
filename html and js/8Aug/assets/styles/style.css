@@ -115,3 +115,11 @@ nav a {
   margin-bottom: 8px;
   gap: 8px;
 }
+
+.heart-red {
+  color: red;
+}
+
+.hidden {
+  display: none;
+}
