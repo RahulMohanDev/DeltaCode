@@ -1,0 +1,17 @@
+{
+  "name": "test-project",
+  "version": "1.0.0",
+  "description": "this is a demo project",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+   "start": "node index.js",
+   "potato": "echo \"hi this is another script\" ",
+   "ls": "ls"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cat-me": "^1.0.3"
+  }
+}

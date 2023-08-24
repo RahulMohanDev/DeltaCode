@@ -1,0 +1,17 @@
+{
+  "name": "test123",
+  "version": "1.0.0",
+  "description": "test 123 package",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test2": "ls",
+    "start": "echo \" running the cat job\" && node test.js"
+  },
+  "author": "Rahul Mohan",
+  "license": "MIT",
+  "dependencies": {
+    "cat-me": "^1.0.3"
+  }
+}
