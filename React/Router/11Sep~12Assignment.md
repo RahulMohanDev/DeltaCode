@@ -17,3 +17,6 @@ https://my.newtonschool.co/playground/newton-box/uotyz5zqycmg
 
 # Authentication using react router - Working with Links, Defining & Using Routes (React), What is Routing & Why?, Rea ... - Post Class
 https://my.newtonschool.co/playground/newton-box/ntvp12j1qo93
+
+# Play the Trivia Game - UseEffect cleaning effect, Handling loading of data building a loader, Using use ... - Post Class
+https://my.newtonschool.co/playground/newton-box/keu719b5zqvh
