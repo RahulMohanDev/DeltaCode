@@ -14,3 +14,6 @@ https://my.newtonschool.co/playground/newton-box/kapgmdbbni7x?lecture_hash=85zqt
 
 # Class based Component- Lifecycle - Class based components, First Class-based Component, Class based Component Lifec ... - In Class
 https://my.newtonschool.co/playground/newton-box/uotyz5zqycmg
+
+# Authentication using react router - Working with Links, Defining & Using Routes (React), What is Routing & Why?, Rea ... - Post Class
+https://my.newtonschool.co/playground/newton-box/ntvp12j1qo93
