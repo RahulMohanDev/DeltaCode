@@ -1,8 +1,8 @@
-
+import { ReactNode } from "react";
 
 import Link from "next/link";
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html>
       <body>

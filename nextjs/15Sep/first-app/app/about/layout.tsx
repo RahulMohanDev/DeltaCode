@@ -1,8 +1,7 @@
 import Link from "next/link";
-// import { useState } from "react";
+import { ReactNode, useEffect, useState } from "react";
 
-export default function AboutLayout({ children }) {
-  // const [test, setTest] = useState();
+export default function AboutLayout({ children }: { children: ReactNode }) {
   return (
     <>
       <nav>
@@ -14,7 +13,7 @@ export default function AboutLayout({ children }) {
             <Link href="/about/rohan">Rohan Singh poon</Link>{" "}
           </li>
         </ol>
-        {children}
+        <div>{children}</div>
       </nav>
     </>
   );
