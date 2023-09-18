@@ -1,3 +1,14 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Rahul Mohan",
+  authors: [{
+    name: "Rahul mohan",
+  },{
+    name: "Eshita",
+  }]
+};
+
 export default function TestPage() {
   return (
     <div>
