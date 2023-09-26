@@ -1,0 +1,34 @@
+{
+  "name": "react-form-scratch",
+  "version": "1.0.0",
+  "description": "A new react app without CRA",
+  "main": "index.js",
+  "author": "Rahul Mohan",
+  "license": "ISC",
+  "scripts": {
+    "build": "Webpack .",
+    "start": "webpack-dev-server ."
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.23.0",
+    "@babel/core": "^7.23.0",
+    "@babel/eslint-parser": "^7.22.15",
+    "@babel/plugin-transform-runtime": "^7.22.15",
+    "@babel/preset-env": "^7.22.20",
+    "@babel/preset-react": "^7.22.15",
+    "@babel/runtime": "^7.23.1",
+    "babel-loader": "^9.1.3",
+    "eslint": "^8.50.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-jest": "^27.4.0",
+    "path": "^0.12.7",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
